@@ -1,0 +1,17 @@
+body{
+    background-image: url("../imgs/backimg1.jpg");
+    background-attachment:fixed;
+    background-size: 100%;
+    no-repeat: center top;
+    font: 14px/1.5 Tahoma,Helvetica,Arial,'宋体',sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+ #scroll {position:fixed; top:300px; left:100px;}
+.scrollItem {
+	width:20px;
+	height:20px;
+	cursor: pointer; 
+	padding-top: 10px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>巫师猫猫-点击即可返回顶部</title>
+	<link rel="stylesheet" href="css/style.css" >
+<link rel="stylesheet" href="css/me.css" >
+	<script src="js/jquery-1.11.0.min.js" type="text/javascript" ></script>
+</head>
+<body>
+<div style="height: 300px">我是无用占位符</div>
+	<div style="height: 300px">我是无用占位符</div>
+	<div style="height: 300px">我是无用占位符</div>
+	<div id="scroll">
+    <div id="toTop" class="scrollItem">
+		<img id="toTopImg" src="imgs/cat1.png" style="width:auto; height: auto;position:absolute">
+    </div>
+  
+<!--
+    <div id="toBottom" class="scrollItem">
+        回到底部
+    </div>
+-->
+  
+</div>    
+</body>
+<script type="text/javascript">  
+  $( function () {
+            var speed = 1000;//自定义滚动速度
+            //回到顶部
+	  var templeft = $('#toTomImg').css('left');
+	  var temptop = $('#toTopImg').css('bottom');
+            $( "#toTop").click( function () {
+                $( "html,body").animate({ "scrollTop" : 0 }, speed);
+				$("#toTopImg").animate({ 
+		 "left" :"+=40px", 
+		  "bottom":"+=40px"
+		  },300//巫师猫猫一跳一跳
+									   ,function () {
+                $(this).animate({ left: templeft, bottom:temptop})}
+        );
+                });
+            //回到底部
+            var windowHeight = parseInt($("body").css("height" ));//整个页面的高度
+            $( "#toBottom").click(function () {
+                $( "html,body").animate({ "scrollTop" : windowHeight }, speed);
+            });
+       
+
+//	  $("#toTopImg").mouseenter(function(){
+//        $(this).stop(true, true);
+//        $w = parseInt($(this).width())+10;
+//        $(this).animate({'width':$w, ,'height':$w},300);
+//    });
+//    $("#toTopImg").mouseleave(function(){
+//        $(this).stop(true, true);
+//        $w = parseInt($(this).width())-10;
+//        $(this).animate({'width':$w,'height':$w},300);
+//    });
+//指针移动到时会放大，不过不太好看
+  });
+</script>
+</html>
+
+	
