@@ -27,6 +27,14 @@
 </body>
 <script type="text/javascript">  
   $( function () {
+	  $(window).scroll(function(){
+           if($(this).scrollTop()>$(window).height()){
+                $("#toTop").show()
+           }else{
+                $("#toTop").hide()
+           }
+      })
+	  
             var speed = 1000;//自定义滚动速度
             //回到顶部
 	  var templeft = $('#toTomImg').css('left');
@@ -46,6 +54,8 @@
             $( "#toBottom").click(function () {
                 $( "html,body").animate({ "scrollTop" : windowHeight }, speed);
             });
+	  
+	  
        
 
 //	  $("#toTopImg").mouseenter(function(){
